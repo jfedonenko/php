@@ -1,0 +1,4 @@
+назкание: model1
+Цвет: color1
+Сила: horsepower3
+Год year1
