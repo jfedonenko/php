@@ -20,9 +20,7 @@ class Equation //создаем класс
 */
     private function discriminant () 
 	{
-		return[
-            **D = b^2 - 4 * a * c**
-        ] ;
+		  $d = ($b*$b) - (4*$a*$c);
        
 	}
    
