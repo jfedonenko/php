@@ -20,7 +20,7 @@ class Equation //создаем класс
 */
     private function discriminant () 
 	{
-		  $d = ($b*$b) - (4*$a*$c);
+		  $D = ($b*$b) - (4*$a*$c);
        
 	}
    
@@ -30,10 +30,8 @@ class Equation //создаем класс
 */    
     private function x1 () 
 	{
-		return
-        [    
-            **x1 = -b + √D / 2 * a**
-        ];
+		  $x1 = (-$b + √$D) - / (2 * $a)
+       
 	}
 /*
     должен находить x2 вашего квадратного уравнения. Используйте формулу x1 = -b - √D / 2 * a 
@@ -41,10 +39,8 @@ class Equation //создаем класс
 */
     private function x2 () 
 	{
-		return
-        [    
-            x1 = -b - √D / 2 * a 
-        ];
+		 $x1 = -$b - √$D / 2 * $a
+       
 	}
 /*
      Метод result (public) должен возвращать массив с решением квадратного уравнения, 
@@ -54,7 +50,7 @@ class Equation //создаем класс
 	{
 		return
         [    
-            "d" => 123,    
+            "D" => 123,    
             "x1" => 4,    
             "x2" => 6
         ];
