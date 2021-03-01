@@ -46,7 +46,7 @@ echo "<pre>";
 
      <?php
 
-$equation = new Equation (a:2, b:2, c: 110, );
+$equation = new Equation (a:3, b:-14, c: -5, );
 //вызываем метод
 echo "<pre>";
 var_dump($equation->discriminant());
