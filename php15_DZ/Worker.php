@@ -20,9 +20,9 @@ class Worker //создаем класс
 	{
         $worker = [
         "name"=>self::name,
-        "email"=>self::>email,
+        "email"=>self::email,
         "age"=>self::age,
-        "profession"=>self::>profession
+        "profession"=>self::profession
         
         ];
 	}
