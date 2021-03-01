@@ -50,7 +50,7 @@ echo "<pre>";
 $equation = new Equation (3, -14, -5);
 //вызываем метод
 echo "<pre>";
-var_dump($equation->discriminant());
+var_dump($equation->result());
 echo "<pre>";
 
  
