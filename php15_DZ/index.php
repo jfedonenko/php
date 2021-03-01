@@ -44,13 +44,13 @@ echo "<pre>";
 			<button type ="submit"> Добавить </button>
 	</form>
 
-     <?php
+<!-- 2й блок: -->
+<?php
 
-$equation = new Equation (a:3, b:-14, c: -5, );
+$equation = new Equation (3, -14, -5);
 //вызываем метод
 echo "<pre>";
 var_dump($equation->discriminant());
 echo "<pre>";
-
 
  
