@@ -27,10 +27,9 @@
                    Количество участников 92
                 </p>
                 <form action="#" class="reg__form">
-                    <input type="text" name="name" class="reg__input input"placeholder="Введите имя" required>
-                    <input type="email" name="email" class="reg__input input" placeholder="Введите E-mail" required>
-                    <input type="tel" name="phone" class="reg__input input" placeholder="Введите телефон" required>
-                    <button type="submit" class="reg__btn button"> Оставить заявку </button>
+                    <input type="text" name="name" class="reg__input input"placeholder="Ваше имя" required>
+                   
+                    <button type="submit" class="reg__btn button"> Войти</button>
                 </form>
                 <p class="reg__text reg__text_tiny">
                     Ваши данные под защитой
