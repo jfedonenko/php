@@ -3,11 +3,16 @@ require_once  __DIR__ . "/vendor/autoload.php";
 
 //подключаем класс Connect
 use App\Connect;
+use App\Rooms;
 
 
 //для проверки БД $bd Connect делаем код
 if (!Connect::check()){
     die("-----Ошибка в классе Connect - База Данных-----");
+}
+
+if (!Rooms::clickMemderRoom($_GET["room_id"], $_GET["member_id"]){
+    die('404');
 }
 ?>
 
@@ -30,9 +35,7 @@ if (!Connect::check()){
                 <input type="tel" name="phone" class="reg__input input" placeholder="сообщение" required>
                 <button type="submit" class="reg__btn button"> Оставить сообщение </button>
             </form>
-            <p class="reg__text reg__text_tiny">
-                Ваши данные под защитой
-            </p>
+           
         </div>
     </div>
 </div>
