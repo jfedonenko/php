@@ -32,4 +32,18 @@ class Rooms extends  Connect
             //проверяем
             return $member ? mysqli_insert_id($connect) : false;
         }
+        public static function clickMemderRoom($room_id, $member_id)
+            {
+
+         $room = mysqli_fetch_assoc(mysqli_query(self::db(),"SELECT * FROM `rooms` WHERE 'id' = $room_id"));
+
+            if(!room){
+            return false;
+            }
+         $member = mysqli_fetch_assoc(mysqli_query(self::db(),"SELECT * FROM `member` WHERE 'id' = $room_id"));
+            if(!$member){
+                return false;
+            }
+
+        }
     }
