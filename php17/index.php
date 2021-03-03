@@ -1,43 +1,78 @@
+<?php
+require_once  __DIR__ . "/vendor/autoload.php";
 
+//подключаем класс Connect
+use App\Connect;
+use App\Rooms;
+
+//для проверки БД $bd Connect делаем код
+if (!Connect::check()){
+    die("-----Ошибка в классе Connect - База Данных-----");
+}
+?>
 <!DOCTYPE html>
 <html lang="en">
 <?php require_once "inclides/head.php"?>
 <body>
 <?php require_once "inclides/header.php"?>
-    <div class="offer">
-        <div class="container d-flex justify-content-between align-items-center">
-            <!------ БЭМ БЛОК------>
+<div class="offer">
+    <div class="container text-align-center align-items-center">
+        <h2> Список комнат:</h2>
 
-            <div class="info">
-                <p class="info__workshop info__worksho_">
-                    <i class="fa fa-power-off info__icon"></i>
-                    ты в чате
-                </p>
-                <h1 class="info__title">
-                    КОМНАТА НАЗВАНИЕ
-                </h1>
-                <span class="info__time">
-						мы online
-					</span>
-            </div>
-            <!------ БЭМ БЛОК для формы------>
-            <div class="reg">
-                <h6 class="reg__title">Забронировать участие</h6>
-                <p class="reg__text">
-                    Чтобы стать профессионалом в  HTML и CSS, а также делать WOW
-                </p>
-                <form action="#" class="reg__form">
-                    <input type="text" name="name" class="reg__input input"placeholder="Введите имя" required>
-                    <input type="email" name="email" class="reg__input input" placeholder="Введите E-mail" required>
-                    <input type="tel" name="phone" class="reg__input input" placeholder="Введите телефон" required>
-                    <button type="submit" class="reg__btn button"> Оставить заявку </button>
-                </form>
-                <p class="reg__text reg__text_tiny">
-                    Ваши данные под защитой
-                </p>
-            </div>
-        </div>
+
+<ul class="rooms">
+
+    <?php
+    $rooms = mysqli_query(Connect::db(), "SELECT * FROM `rooms`");
+    while ($room = mysqli_fetch_assoc($rooms)){
+    ?>
+
+    <li class="rooms_list">
+        <h6 class="reg__title">
+
+            <?= $room["title"] ?>
+
+        </h6>
+        <p class="reg__text">
+            Количество участников 92
+        </p>
+        <form action="/" class="reg__form" method="post">
+            <input type="hidden" name="id" value=" <?= $room["id"] ?>">
+            <input type="text" name="username" class="reg__input input"placeholder="Ваше имя" required>
+            <button type="submit" name="submit_<?=$room["id"] ?>" class="reg__btn button"> Войти</button>
+        </form>
+        <p class="reg__text reg__text_tiny">
+            Ваши данные под защитой
+        </p>
+        <?php
+        if (!is_null($_POST["submit_" . $room["id"]])){
+            $member = Rooms::addMembers($_POST["username"], $_POST["id"]);
+
+        ?>
+
+            <?php
+            if ($member){
+
+            }else{
+                echo '  <p class="reg__text reg__text_tiny">
+           Ошибка при переходе 
+                </p>';
+            }
+        }
+
+        ?>
+    </li>
+        <?php
+
+
+    }
+    ?>
+</ul>
+
+
+
     </div>
+</div>
 </header>
 
 </body>

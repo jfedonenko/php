@@ -39,10 +39,6 @@ if (!Connect::check()){
         <!------ БЭМ БЛОК для формы------>
         <div class="reg">
             <h6 class="reg__title">СОЗДАТЬ КОМНАТУ</h6>
-            <p class="reg__text">
-                Для общения создайте комнату
-            </p>
-
 
 <!--            для отправки формы указываем путь action="create-room.php" method="post"-->
 <!--            input name="title"-->
@@ -52,8 +48,6 @@ if (!Connect::check()){
                 <input type="text" name="title" class="reg__input input"placeholder="Название комнаты" required>
                 <button class="reg__btn button" name="submit"> Отправить  </button>
             </form>
-
-
 
             <?php
                  if (!is_null($_POST["submit"]))
