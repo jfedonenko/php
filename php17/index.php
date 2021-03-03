@@ -45,15 +45,11 @@ if (!Connect::check()){
             Ваши данные под защитой
         </p>
         <?php
-        if (!is_null($_POST["submit_" . $room["id"]])){
-            $member = Rooms::addMembers($_POST["username"], $_POST["id"]);
-
-        ?>
-
-            <?php
-            if ($member){
-
-            }else{
+                 if (!is_null($_POST["submit_" . $room["id"]])){
+                  $member = Rooms::addMembers($_POST["username"], $_POST["id"]);
+                  if ($member){
+                        header('location: /chat.php?room_id=' . $room["id"] . '&member_id' . $member);
+                  }else{
                 echo '  <p class="reg__text reg__text_tiny">
            Ошибка при переходе 
                 </p>';
@@ -63,10 +59,8 @@ if (!Connect::check()){
         ?>
     </li>
         <?php
-
-
-    }
-    ?>
+        }
+        ?>
 </ul>
 
 
