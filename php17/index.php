@@ -39,7 +39,7 @@ if (!Connect::check()){
 
                 $rooms = mysqli_query(Connect::db(), "SELECT * FROM `rooms`");
 
-                while ($rooms = mysqli_fetch_assoc($rooms)){
+                while ($room = mysqli_fetch_assoc($rooms)){
 
 
                 ?>
