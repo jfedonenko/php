@@ -22,9 +22,9 @@
             </div>
             <!------ БЭМ БЛОК для формы------>
             <div class="reg">
-                <h6 class="reg__title">Забронировать участие</h6>
+                <h6 class="reg__title">Список комнат</h6>
                 <p class="reg__text">
-                    Чтобы стать профессионалом в  HTML и CSS, а также делать WOW
+                   Количество участников 92
                 </p>
                 <form action="#" class="reg__form">
                     <input type="text" name="name" class="reg__input input"placeholder="Введите имя" required>
