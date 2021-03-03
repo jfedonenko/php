@@ -43,7 +43,11 @@ if (!Connect::check()){
 
 
                 ?>
-                <h6 class="reg__title">Список комнат</h6>
+                 <h6 class="reg__title">
+                    
+                  <?= $room["title"] ?>
+
+                </h6>
                 <p class="reg__text">
                     Количество участников 92
                 </p>
