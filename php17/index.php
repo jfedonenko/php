@@ -16,22 +16,7 @@ if (!Connect::check()){
 <body>
 <?php require_once "inclides/header.php"?>
     <div class="offer">
-        <div class="container d-flex justify-content-between align-items-center">
-            <!------ БЭМ БЛОК------>
-
-            <div class="info">
-                <p class="info__workshop info__worksho_">
-                    <i class="fa fa-power-off info__icon"></i>
-                    ты в чате
-                </p>
-                <h1 class="info__title">
-                    КОМНАТА НАЗВАНИЕ
-                </h1>
-                <span class="info__time">
-						мы online
-					</span>
-            </div>
-            <!------ БЭМ БЛОК для формы------>
+         <div class="container text-align-center align-items-center">
              <div class="reg">
 
 
