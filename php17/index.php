@@ -19,14 +19,14 @@ if (!Connect::check()){
         <h2> Список комнат:</h2>
 
 
-<ul class="reg rooms">
+<ul class="rooms">
 
     <?php
     $rooms = mysqli_query(Connect::db(), "SELECT * FROM `rooms`");
     while ($room = mysqli_fetch_assoc($rooms)){
     ?>
 
-    <li class="reg__title">
+    <li class="rooms_list">
         <h6 class="reg__title">
 
             <?= $room["title"] ?>
@@ -51,7 +51,7 @@ if (!Connect::check()){
     ?>
 </ul>
 
-              
+
 
     </div>
 </div>
