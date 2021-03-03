@@ -41,7 +41,7 @@ class Rooms extends  Connect
             return false;
             }
 
-            $member = mysqli_fetch_assoc(mysqli_query(self::db(),"SELECT * FROM `member` WHERE 'id' = $member_id"));
+            $member = mysqli_fetch_assoc(mysqli_query(self::db(),"SELECT * FROM `members` WHERE 'id' = $member_id"));
                 if(is_null($member)){
                 return false;
             }
