@@ -184,9 +184,9 @@ font-size: 15px;
     }
 
 .reg{
-	width: 330px;
 	
-	padding: 35px 33px 17px;
+	
+	display: flex;
 	text-align: center;
 	
 	border-radius: 5px;
@@ -194,10 +194,12 @@ font-size: 15px;
 .reg__title{
 	font-size: 17px;
 	text-transform: none;
-	margin-bottom: 14px;
+	
 	background: #fff;
 	box-shadow: 0 1px 90px rgba(0,0,0,0.24);
 	border-radius: 5px;
+	margin: 25px;
+    	padding: 20px;
 }
 .reg__text{
 	margin-bottom: 15px;
