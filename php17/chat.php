@@ -1,3 +1,15 @@
+<?php
+require_once  __DIR__ . "/vendor/autoload.php";
+
+//подключаем класс Connect
+use App\Connect;
+
+
+//для проверки БД $bd Connect делаем код
+if (!Connect::check()){
+    die("-----Ошибка в классе Connect - База Данных-----");
+}
+?>
 
 <!DOCTYPE html>
 <html lang="en">
@@ -5,31 +17,18 @@
 <body>
 <?php require_once "inclides/header.php"?>
 <div class="offer">
-    <div class="container d-flex justify-content-between align-items-center">
-        <!------ БЭМ БЛОК------>
-        <div class="info">
-            <p class="info__workshop info__worksho_">
-                <i class="fa fa-graduation-cap info__icon"></i>
-                Онлайн-мастер-класс
-            </p>
-            <h1 class="info__title">
-                Я — профессиональный веб-верстальщик!!!!!!!!!!!!!
-            </h1>
-            <span class="info__time">
-						9 апреля в 18:00
-					</span>
-        </div>
-        <!------ БЭМ БЛОК для формы------>
+    <div class="container d-flex  align-items-center">
+
         <div class="reg">
-            <h6 class="reg__title">Забронировать участие</h6>
+            <h6 class="reg__title">Чат</h6>
             <p class="reg__text">
-                Чтобы стать профессионалом в  HTML и CSS, а также делать WOW
+                Начни общаться легко
             </p>
             <form action="#" class="reg__form">
                 <input type="text" name="name" class="reg__input input"placeholder="Введите имя" required>
                 <input type="email" name="email" class="reg__input input" placeholder="Введите E-mail" required>
-                <input type="tel" name="phone" class="reg__input input" placeholder="Введите телефон" required>
-                <button type="submit" class="reg__btn button"> Оставить заявку </button>
+                <input type="tel" name="phone" class="reg__input input" placeholder="сообщение" required>
+                <button type="submit" class="reg__btn button"> Оставить сообщение </button>
             </form>
             <p class="reg__text reg__text_tiny">
                 Ваши данные под защитой
