@@ -25,9 +25,11 @@ class Rooms extends  Connect
         }
             //подключаем $SQL
             $SQL = "INSERT INTO `members` (`id`, `name`, `room_id`) VALUES (NULL,'$name,', '$room_id')";
-            //подключаем базу данных  из класса Connect db()
+
+        $connect = self::db();
+        //подключаем базу данных  из класса Connect db()
             $member = mysqli_query(self::db(), $SQL);
             //проверяем
-            return $member ? true : false;
+            return $member ? mysqli_insert_id($connect) : false;
         }
     }
