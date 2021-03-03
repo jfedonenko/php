@@ -218,3 +218,17 @@ input:focus::placeholder{
 	color: #000;
 }
 
+.rooms{
+
+	display: flex;
+}
+.rooms_list{
+	max-width: 330px;
+	background: #fff;
+	padding: 35px 33px 17px;
+	text-align: center;
+	box-shadow: 0 1px 90px rgba(0,0,0,0.24);
+	border-radius: 5px;
+	margin: 35px;
+
+}
