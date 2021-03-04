@@ -9,6 +9,7 @@ use App\Rooms;
 if (!Connect::check()){
     die("-----Ошибка в классе Connect - База Данных-----");
 }
+//die(var_dump(Rooms::clickMemderRoom($_GET["room_id"], $_GET["member_id"])));
 
 if (!Rooms::clickMemderRoom($_GET["room_id"], $_GET["member_id"])){
     die('404');
