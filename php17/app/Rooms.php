@@ -23,8 +23,8 @@ class Rooms extends  Connect
         if ($name === "" || $room_id === "") {
             return false;
         }
-            //подключаем $SQL
-            $SQL = "INSERT INTO `members` (`id`, `name`, `room_id`) VALUES (NULL,'$name,', '$room_id')";
+        //подключаем $SQL
+            $SQL = "INSERT INTO `members` (`id`, `name`, `room_id`) VALUES (NULL,'$name', '$room_id')";
 
         $connect = self::db();
         //подключаем базу данных  из класса Connect db()
