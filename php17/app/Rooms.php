@@ -32,6 +32,7 @@ class Rooms extends  Connect
             //проверяем
             return $member ? mysqli_insert_id($connect) : false;
         }
+
         public static function clickMemderRoom($room_id, $member_id)
             {
 
