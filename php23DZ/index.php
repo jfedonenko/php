@@ -2,6 +2,13 @@
 
 require_once 'includes/db.php';
 
+//mysqli_query($db,UPDATE `products` SET
+//`description` = 'Pro Max 512Gb Graphite!',
+//`price` = '300', `category` = 'без категории', `img` = ''
+// `products`.`id` = 5);
+//
+//die();
+
 $products = mysqli_query($db ,"SELECT * FROM `products`");
 
 ?>
@@ -33,6 +40,9 @@ $products = mysqli_query($db ,"SELECT * FROM `products`");
 
 </form>
 
+
+
+
 <H1>
     Вывод списока товаров
 </H1>
@@ -55,9 +65,12 @@ $products = mysqli_query($db ,"SELECT * FROM `products`");
             <td><?= $product["title"]?></td>
             <td><?= $product["price"]?>$</td>
             <td><?= $product["category"]?></td>
-            // один продукт
             <td>
-                <a href="produkt.php?id=<?= $product["id"]?> ">Look</a>
+                <a href="produkt.php?id=<?= $product["id"]?> ">СМОТРЕТЬ</a>
+            <br>
+                <a href="product_edit.php?id=<?= $product["id"]?> ">РЕДАКТИРОВАТЬ</a>
+                <br>
+                <a href="product_remove_confirm.php?id=<?= $product["id"]?>">УДАЛИТЬ</a>
             </td>
         </tr>
 
@@ -66,3 +79,4 @@ $products = mysqli_query($db ,"SELECT * FROM `products`");
     ?>
 
 </table>
+
